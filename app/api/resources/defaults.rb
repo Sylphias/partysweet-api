@@ -6,7 +6,6 @@ module Resources
       default_format :json
       formatter :json, Grape::Formatter::Jbuilder
       formatter :xml, Grape::Formatter::Jbuilder
-
     end
   end
 end

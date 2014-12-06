@@ -47,6 +47,16 @@ GEM
     equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.2.2)
+    fabricator (0.0.5)
+      activesupport (>= 2.0.2)
+      rubigen (= 1.5.2)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     grape (0.9.0)
       activesupport
       builder
@@ -119,6 +129,8 @@ GEM
     rake (10.4.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    rubigen (1.5.2)
+      activesupport (>= 2.2.2)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -172,6 +184,9 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  fabricator
+  factory_girl_rails
+  faker
   grape
   grape-jbuilder
   grape-swagger-rails

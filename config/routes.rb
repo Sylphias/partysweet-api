@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Resources::Base => '/'
+  mount Resources::Base => '/api'
   mount GrapeSwaggerRails::Engine => '/swagger'
   
   # The priority is based upon order of creation: first created -> highest priority.
