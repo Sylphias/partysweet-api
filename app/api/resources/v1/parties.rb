@@ -29,7 +29,7 @@ module Resources
               )
               inv = Invitation.where(user_id: user.id, party_id: p.id).first
               inv.host = u[:host]
-              inv.save
+              inv.update
             end
             party_items.each do |i|
               item = p.items.create(
@@ -38,9 +38,19 @@ module Resources
                 )
               res = Resource.where(item_id: item.id, party_id: p.id).first
               res.quantity = i[:quantity]
-              res.save
+              res.update
             end
-
+          end
+        desc "Update invitee status"
+          params do
+            requires :user_id, type: Integer, desc: "User Id"
+            requires :party_id, type: Integer, desc: "Party Id"
+            requires :paid, type: Boolean, desc: "User's paid status"
+          end
+          put '/update_invite' do 
+            inv = Invitation.where(user_id: params[:user_id], party_id: params[:party_id]).first
+            inv.host = params[:paid]
+            inv.update
           end
 
       end
