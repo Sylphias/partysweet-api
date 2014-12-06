@@ -8,7 +8,14 @@ module Resources
             @user = User.all
           end
         end
-
+        desc "create a user"
+        params do
+          required :name,type: integer, desc: "User's name"
+          required :number, type: integer, desc: "User's number"
+        end
+        post '/' do
+          User.create(name: params[:name], number: params[:number])
+        end
     end
   end
 end

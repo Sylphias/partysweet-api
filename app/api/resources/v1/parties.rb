@@ -24,7 +24,7 @@ module Resources
               image: party[:image]
               )
             party_users.each do |u|
-              user = p.users.create(
+              user = p.users.find_or_create_by(
                 name: u[:name], 
                 number: u[:number],
                 image: u[:image]
