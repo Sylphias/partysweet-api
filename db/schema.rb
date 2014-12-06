@@ -13,9 +13,11 @@
 
 ActiveRecord::Schema.define(version: 20141206142946) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "invitations", force: true do |t|
     t.boolean  "paid"
-    t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "host"
@@ -36,6 +38,7 @@ ActiveRecord::Schema.define(version: 20141206142946) do
     t.date     "date"
     t.string   "time"
     t.string   "location"
+    t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -11,7 +11,8 @@
   title: Faker::Name.title,
   description: Faker::Lorem.sentence(3),
   date: Faker::Date.between(2.days.ago, Date.today),
-  time: Time.now
+  time: Time.now,
+  price: Faker::Commerce.price 
   )
   5.times do
     u = p.users.create(
