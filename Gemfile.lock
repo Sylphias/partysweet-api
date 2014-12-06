@@ -32,6 +32,8 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    braintree (2.37.0)
+      builder (>= 2.0.0)
     builder (3.2.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -194,6 +196,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  braintree
   coffee-rails (~> 4.0.0)
   dotenv-rails
   fabricator
