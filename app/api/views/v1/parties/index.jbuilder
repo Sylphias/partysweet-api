@@ -7,6 +7,7 @@ json.set! :parties do
     json.time party.time
     json.location party.location
     json.price party.price
+    json.image  party.image
   json.set! :party_invitations do
     json.array! party.invitations.each do |i|
       json.paid i.paid
@@ -20,6 +21,7 @@ json.set! :parties do
       json.id u.id
       json.name u.name
       json.number u.number
+      json.image u.image
     end
   end
   json.set! :party_resources do

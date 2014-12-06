@@ -12,7 +12,8 @@
   description: Faker::Lorem.sentence(3),
   date: Faker::Date.between(2.days.ago, Date.today),
   time: Time.now,
-  price: Faker::Commerce.price 
+  price: Faker::Commerce.price ,
+  location: Faker::Address.street_address
   )
   5.times do
     u = p.users.create(

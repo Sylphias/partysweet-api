@@ -20,12 +20,14 @@ module Resources
               date: party[:date],
               time: party[:time],
               location: party[:location],
-              price: party[:price]
+              price: party[:price],
+              image: party[:image]
               )
             party_users.each do |u|
               user = p.users.create(
                 name: u[:name], 
-                number: u[:number]
+                number: u[:number],
+                image: u[:image]
               )
               inv = Invitation.where(user_id: user.id, party_id: p.id).first
               inv.host = u[:host]
