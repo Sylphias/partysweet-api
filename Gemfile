@@ -19,3 +19,9 @@ gem 'factory_girl_rails'
 gem 'fabricator'
 gem 'spring',        group: :development
 
+group :production, :staging do
+
+  gem 'heroku-deflater'
+  gem 'rails_12factor'
+
+end
