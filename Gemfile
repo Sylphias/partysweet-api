@@ -14,6 +14,7 @@ gem 'grape-jbuilder'
 gem 'hashie_rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'dotenv-rails'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'factory_girl_rails'
 gem 'fabricator'

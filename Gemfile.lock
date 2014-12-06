@@ -44,6 +44,9 @@ GEM
     coffee-script-source (1.8.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -191,6 +194,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   fabricator
   factory_girl_rails
   faker
