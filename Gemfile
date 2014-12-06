@@ -8,11 +8,11 @@ gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'grape'
-gem 'grape-swagger'
-gem 'jbuilder'
+gem 'grape-swagger-rails'
+gem 'grape-jbuilder'
+gem 'hashie_rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
