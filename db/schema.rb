@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141206115147) do
+ActiveRecord::Schema.define(version: 20141206142946) do
 
   create_table "invitations", force: true do |t|
     t.boolean  "paid"
     t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "host"
+    t.integer  "party_id"
+    t.integer  "user_id"
   end
 
   create_table "items", force: true do |t|
@@ -41,6 +44,8 @@ ActiveRecord::Schema.define(version: 20141206115147) do
     t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "party_id"
+    t.integer  "item_id"
   end
 
   create_table "users", force: true do |t|
