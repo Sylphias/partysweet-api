@@ -6,7 +6,7 @@ class CreateParties < ActiveRecord::Migration
       t.date :date
       t.string :time
       t.string :location
-
+      t.float :price
       t.timestamps
     end
   end

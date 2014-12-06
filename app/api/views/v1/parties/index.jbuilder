@@ -6,9 +6,9 @@ json.set! :parties do
     json.date party.date
     json.time party.time
     json.location party.location
+    json.price party.price
   json.set! :party_invitations do
     json.array! party.invitations.each do |i|
-      json.price i.price
       json.paid i.paid
       json.host i.host
       json.user_id i.user_id
