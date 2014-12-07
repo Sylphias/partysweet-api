@@ -54,7 +54,6 @@ module Resources
           end
         desc "Braintree Payments"
         post '/pay' do
-          binding.pry
           result = Braintree::Transaction.sale(
               :amount => params[:price],
               :payment_method_nonce => params[:nonce]
