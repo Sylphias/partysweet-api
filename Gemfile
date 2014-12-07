@@ -14,13 +14,14 @@ gem 'grape-jbuilder'
 gem 'hashie_rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'braintree'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'dotenv-rails'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'factory_girl_rails'
 gem 'fabricator'
+gem 'pry-rails'
 gem 'spring',        group: :development
-gem 'braintree'
 group :production, :staging do
 
   gem 'heroku-deflater'

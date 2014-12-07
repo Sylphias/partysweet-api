@@ -10,10 +10,10 @@ module Resources
         desc "Add a new party with all the information" 
           post '/' do
             party = params[:party]
-            party_invitation = params[:party][:party_invitation]
+            # party_invitation = params[:party][:party_invitation]
             party_users = params[:party][:party_user]
             party_items = params[:party][:party_items]
-            party_resources = params[:party][:party_resources]
+            # party_resources = params[:party][:party_resources]
             p = Party.create(
               title: party[:title],
               description: party[:description],
@@ -30,8 +30,7 @@ module Resources
                 image: u[:image]
               )
               inv = Invitation.where(user_id: user.id, party_id: p.id).first
-              inv.host = u[:host]
-              inv.update
+              inv.update(host: u[:host])
             end
             party_items.each do |i|
               item = p.items.create(
@@ -39,8 +38,7 @@ module Resources
                 price: i[:price]
                 )
               res = Resource.where(item_id: item.id, party_id: p.id).first
-              res.quantity = i[:quantity]
-              res.update
+              res.update(quantity: i[:quantity])
             end
           end
         desc "Update invitee status"
@@ -54,6 +52,14 @@ module Resources
             inv.host = params[:paid]
             inv.update
           end
+        desc "Braintree Payments"
+        post '/pay' do
+          binding.pry
+          result = Braintree::Transaction.sale(
+              :amount => params[:price],
+              :payment_method_nonce => params[:nonce]
+          )
+        end
 
       end
 

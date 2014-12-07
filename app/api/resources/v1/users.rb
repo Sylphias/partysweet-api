@@ -10,8 +10,8 @@ module Resources
         end
         desc "create a user"
         params do
-          required :name,type: integer, desc: "User's name"
-          required :number, type: integer, desc: "User's number"
+          requires :name,type: String, desc: "User's name"
+          requires :number, type: Integer, desc: "User's number"
         end
         post '/' do
           User.create(name: params[:name], number: params[:number])
